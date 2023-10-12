@@ -17,10 +17,33 @@ public class Sketch extends PApplet {
 
   //Called repeatedly, anything drawn to the screen goes here 
   public void draw() {
-	  stroke(43, 97, 143);
+	  float circleX = random(0, width);
+    float circleY = random(0, height);
+
+    stroke(43, 97, 143);
     fill(43, 97, 143);
-    ellipse(random(0, width), random(0, height), 50, 50);
+    ellipse(circleX, circleY, 50, 50);
+        
+    if (circleX > 200 && circleY > 200){
+      fill (234, 0, 255);
+      ellipse(circleX, circleY, 50, 50);
+    } else if (circleX > 200 && circleY < 200){
+      fill (255, 0, 0);
+      ellipse(circleX, circleY, 50, 50);
+    } else if (circleX < 200 && circleY > 200){
+      fill(0, 255, 0);
+      ellipse(circleX, circleY, 50, 50);
+    } else if (circleX < 200 && circleY < 200){
+      fill(0, 0, 255);
+      ellipse(circleX, circleY, 50, 50);
+    }
+      
+    text(hour(), 180, 200);
+    text(minute(), 200, 200);
+    text(second(), 210, 200);
     
+    noLoop();
+
   }
-    
+  
 }
