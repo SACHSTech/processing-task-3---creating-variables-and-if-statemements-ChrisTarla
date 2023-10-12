@@ -22,6 +22,10 @@ public class Sketch extends PApplet {
 
     stroke(43, 97, 143);
     fill(43, 97, 143);
+    ellipse(circleX - 25, circleY - 25, 50, 50);
+    ellipse(circleX - 25, circleY + 25, 50, 50);
+    ellipse(circleX + 25, circleY - 25, 50, 50);
+    ellipse(circleX + 25, circleY + 25, 50, 50);
     ellipse(circleX, circleY, 50, 50);
         
     if (circleX > 200 && circleY > 200){
@@ -40,7 +44,7 @@ public class Sketch extends PApplet {
       
     text(hour(), 180, 200);
     text(minute(), 200, 200);
-    text(second(), 210, 200);
+    text(second(), 220, 200);
     
     noLoop();
 
